@@ -1,0 +1,59 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require c3
+ *= metricsgraphics
+ *= require_tree .
+ *= require_self
+ */
+
+/* Logfield brand color */
+$brand-primary: #f14624;
+$brand-secondary: #1d204e;
+
+$link-color: #2a5db0;
+$gray-base: #000;
+
+$pagination-color: $gray-base;
+$pagination-hover-color: $pagination-color;
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import 'bootstrap-datetimepicker';
+
+html.turbolinks-progress-bar::before {
+  background-color: $brand-primary !important;
+}
+
+body {
+ /* Padding to footer */
+ margin-bottom: 20px;
+}
+
+/* Align table elements to the middle. */
+.table > tbody > tr > td {
+ vertical-align: middle;
+}
+
+/* Remove the pagination margin. */
+.pagination {
+  margin: 0px;
+}
+
+.field_with_errors {
+ @extend .has-error;
+}
+
+.filter-col {
+    padding-left:10px;
+    padding-right:10px;
+}
